@@ -12,4 +12,13 @@ public interface ServiceConfiguration {
      * @return full file path to the log directory including ending path separator
      */
     String getLogDirectory();
+
+	/**
+	 * Get the ValueItemLogger descriptor which is used to set the global
+	 * logger component type used by all HomeItems that require logging its
+	 * value.
+	 * 
+	 * @return
+	 */
+	String getValueItemLoggerDescriptor();
 }

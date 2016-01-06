@@ -117,4 +117,9 @@ public class TstHomeService implements HomeService, ServiceConfiguration {
     public boolean executePython(String pythonCode) {
         return true;
     }
+
+	@Override
+	public String getValueItemLoggerDescriptor() {
+		return null;
+	}
 }

@@ -22,6 +22,7 @@ package nu.nethome.home.impl;
 import nu.nethome.home.item.*;
 import nu.nethome.home.system.HomeService;
 
+import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
@@ -125,4 +126,5 @@ public class LocalHomeItemProxy implements HomeItemProxy {
     public Object getInternalRepresentation() {
         return item;
     }
+
 }

@@ -6,8 +6,10 @@ import nu.nethome.home.system.HomeService;
  *
  */
 public class ExtendedLoggerComponent extends LoggerComponent {
+
     public ExtendedLoggerComponent(ValueItem logged) {
         super(logged);
+        homeItemId = Long.toString(logged.getItemId());
     }
 
     public void activate(HomeService server) {
@@ -16,5 +18,7 @@ public class ExtendedLoggerComponent extends LoggerComponent {
             logPath = server.getConfiguration().getLogDirectory();
         }
         super.activate(logPath);
+        service = server;
+        config = service.getConfiguration();
     }
 }
