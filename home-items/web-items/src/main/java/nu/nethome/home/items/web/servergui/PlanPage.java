@@ -1,18 +1,18 @@
 /**
  * Copyright (C) 2005-2013, Stefan Strömberg <stefangs@nethome.nu>
- *
+ * <p/>
  * This file is part of OpenNetHome  (http://www.nethome.nu)
- *
+ * <p/>
  * OpenNetHome is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
- *
+ * <p/>
  * OpenNetHome is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
- *
+ * <p/>
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
@@ -120,12 +120,12 @@ public class PlanPage implements HomePageInterface {
 
     private void printEditInfo(PrintWriter p) {
         p.println("<div class=\"draggable ui-draggable\" style=\"top:170px;left:41px;\">\n" +
-                "<img src=\"web/home/info16.png\" />&nbsp;Drag and drop to move Items on the page" +
-                "</div>");
+                "<img src=\"web/home/info16.png\" /><span class=\"text\">&nbsp;Drag and drop to move Items on the page" +
+                "</span></div>");
         p.println("<div class=\"draggable ui-draggable\" style=\"top:250px;left:41px;\">\n" +
-                "<img src=\"web/home/info16.png\" />&nbsp;To add a new background image, go to <a href=\"" +
+                "<img src=\"web/home/info16.png\" /><span class=\"text\">&nbsp;To add a new background image, go to <a href=\"" +
                 localURL + "?page=settings&subpage=media" + "\">Settings->Media</a>" +
-                "</div>");
+                "</span></div>");
     }
 
     private void printPlanUpdateScript(PrintWriter p, Plan viewedPlan, boolean editMode) {
