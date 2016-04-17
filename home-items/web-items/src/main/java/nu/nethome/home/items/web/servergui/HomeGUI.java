@@ -1,18 +1,18 @@
 /**
  * Copyright (C) 2005-2013, Stefan Strömberg <stefangs@nethome.nu>
- *
+ * <p/>
  * This file is part of OpenNetHome  (http://www.nethome.nu)
- *
+ * <p/>
  * OpenNetHome is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
- *
+ * <p/>
  * OpenNetHome is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
- *
+ * <p/>
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
@@ -341,7 +341,7 @@ public class HomeGUI extends HttpServlet implements FinalEventListener, HomeItem
             }
             p.format("]}");
             return;
-        }else if (funcId != null && funcId.compareToIgnoreCase("getattributes") == 0) {
+        } else if (funcId != null && funcId.compareToIgnoreCase("getattributes") == 0) {
             if (itemName == null && itemID == null)
                 return;
             if (itemName != null && itemName.length() == 0)
@@ -459,8 +459,8 @@ public class HomeGUI extends HttpServlet implements FinalEventListener, HomeItem
                 p.println("	 <script type=\"text/javascript\" src=\"" + script + "\"></script>");
             }
         }
-        String leftBannerFileName = customLeftBannerFile.length() > 0 ? customLeftBannerFile : "web/home/left_banner.jpg";
-        String rightBannerFileName = customRightBannerFile.length() > 0 ? customRightBannerFile : "web/home/right_banner.jpg";
+        String leftBannerFileName = customLeftBannerFile.length() > 0 ? customLeftBannerFile : "web/home/left_banner.png";
+        String rightBannerFileName = customRightBannerFile.length() > 0 ? customRightBannerFile : "web/home/right_banner.png";
         p.println("</head>");
         p.println("<body>");
         p.println("<div id=\"pageBody\">");
@@ -693,15 +693,15 @@ public class HomeGUI extends HttpServlet implements FinalEventListener, HomeItem
         }
         ageString.append(ageSeconds).append(" Sec");
         p.println("  <tr>");
-        p.printf ("   <td><img src=\"web/home/%s\" /></td>\n", (event.getWasHandled() ? "item16.png" : "item_new16.png"));
+        p.printf("   <td><img src=\"web/home/%s\" /></td>\n", (event.getWasHandled() ? "item16.png" : "item_new16.png"));
         if (event.getContent().length() < MAX_EVENT_ID_LENGTH) {
-            p.printf ("   <td>%s</td>\n", event.getContent());
-        } else  {
-            p.printf ("   <td title=\"%s\">%s...</td>\n", event.getContent(), event.getContent().substring(0, MAX_EVENT_ID_LENGTH));
+            p.printf("   <td>%s</td>\n", event.getContent());
+        } else {
+            p.printf("   <td title=\"%s\">%s...</td>\n", event.getContent(), event.getContent().substring(0, MAX_EVENT_ID_LENGTH));
         }
-        p.printf ("   <td><a onclick=\"location.href=homeManager.classUrl + '&event=%d';return false;\" href=\"%s?page=edit&event=%d\">Create Item</a></td>\n", event.getId(), localURL, event.getId());
-        p.printf ("   <td>%s</td>\n", ageString);
-        p.printf ("   <td>%s</td>\n", (event.getWasHandled() ? "Existing" : "New"));
+        p.printf("   <td><a onclick=\"location.href=homeManager.classUrl + '&event=%d';return false;\" href=\"%s?page=edit&event=%d\">Create Item</a></td>\n", event.getId(), localURL, event.getId());
+        p.printf("   <td>%s</td>\n", ageString);
+        p.printf("   <td>%s</td>\n", (event.getWasHandled() ? "Existing" : "New"));
         p.println("  </tr>");
     }
 }
