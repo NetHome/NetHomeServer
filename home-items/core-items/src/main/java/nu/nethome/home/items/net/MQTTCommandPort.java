@@ -155,15 +155,6 @@ public class MQTTCommandPort extends HomeItemAdapter implements HomeItem {
             try {
                 String event = "event,Mqtt_Message,Direction,In,Mqtt.Topic," + topic + ",Mqtt.Message," + message.toString();
                 executor.executeCommandLine(event);
-//                for (HomeItemProxy homeItemProxy : server.openAllInstancesByMqttTopic(topic)) {
-//                    if(hasAction(homeItemProxy, message.toString())) {
-//                        homeItemProxy.callAction(message.toString());
-//                    }
-//                    else {
-//                        String defaultAttribute = homeItemProxy.getModel().getDefaultAttribute().getName();
-//                        homeItemProxy.setAttributeValue(defaultAttribute, message.toString());
-//                    }
-//                }
             } catch (Exception e) {
                 e.printStackTrace();
             }
